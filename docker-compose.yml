@@ -1,0 +1,10 @@
+services:
+  api:
+    build: .
+    ports:
+      - "4080:4080"
+    volumes:
+      # Le dossier 'data' de l'hôte sera monté sur /data dans le conteneur
+      - ./data:/data
+      # Le dossier 'app' de l'hôte sera monté sur /code/app dans le conteneur (pour faciliter la mise à jour du code)
+      - ./app:/code/app
